@@ -26,6 +26,9 @@ body {
     font-size: .13rem;
     height: 100%;
 }
+h1{
+    font-size: .12rem;
+}
 @media (max-width: 480px) {
     html {
         font-size: 20.83333vw;

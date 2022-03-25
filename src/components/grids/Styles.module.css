@@ -4,14 +4,17 @@
     height: 100%;
 
 }
+
 .leftSection {
     width: 50%;
     height: 100%;
     border-right: .01rem solid #858585;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 1rem;
 }
 .rightSection{
     width: 50%;
@@ -20,4 +23,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }

@@ -1,0 +1,35 @@
+.button {
+    width: .5rem;
+    height: .2rem;
+    background: rgb(112, 221, 255);
+    background: linear-gradient(90deg, rgba(112, 221, 255, 1) 0%, rgba(153, 255, 167, 1) 52%, rgba(248, 255, 153, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .1rem;
+    cursor: pointer;
+    color: #111111;
+    margin-bottom: .5rem;
+}
+
+.interface{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: .09rem;
+    padding-bottom: .1rem;
+    border-bottom: .01rem solid #858585;
+}
+.interfaceTitle{
+
+}
+.interfaceInformation{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: .1rem;
+}
+.input{
+    width: 1.2rem;
+    height: .15rem;
+}

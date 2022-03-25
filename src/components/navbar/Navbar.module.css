@@ -21,12 +21,12 @@
 }
 
 .navbar li a {
-    background: #F8FF99;
-    background: -webkit-radial-gradient(circle farthest-corner at center center, #F8FF99 0%, #99FFA7 100%);
-    background: -moz-radial-gradient(circle farthest-corner at center center, #F8FF99 0%, #99FFA7 100%);
-    background: radial-gradient(circle farthest-corner at center center, #F8FF99 0%, #99FFA7 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: #70DDFF;
+background: -webkit-linear-gradient(to right, #70DDFF 0%, #99FFA7 50%, #F8FF99 100%);
+background: -moz-linear-gradient(to right, #70DDFF 0%, #99FFA7 50%, #F8FF99 100%);
+background: linear-gradient(to right, #70DDFF 0%, #99FFA7 50%, #F8FF99 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .github {
