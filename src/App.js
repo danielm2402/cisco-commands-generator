@@ -71,6 +71,12 @@ const wildcard = {
   1: '127.255.255.255',
 }
 
+function ValidateIPaddress(ipaddress) {  
+  if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ipaddress)) {  
+    return (true)  
+  }  
+  return (false)  
+}  
 
 const convertToBinary1 = (number) => {
   let num = number;
@@ -242,6 +248,7 @@ function App() {
             <select name='interfaceType' value={sw.interfaceType} onChange={(e) => { handlerSwitch(e, i) }} >
               <option value="gigabitEthernet">gigabitEthernet</option>
               <option value="serial" selected>serial</option>
+              <option value="fastEthernet" selected>fastEthernet</option>
             </select>
 
             <label>interface</label>
@@ -274,7 +281,7 @@ function App() {
                     interface {item.interfaceType} {item.interface}
                   </code>
                   <code style={{ display: 'block' }}>
-                    ip address {item.ip} {prefijos[item.prefix]}
+                    ip address {ValidateIPaddress(item.ip)?item.ip:'error'} {prefijos[item.prefix]}
                   </code>
                   {item.bandwidth&&
                     <code style={{ display: 'block' }}>
@@ -297,7 +304,7 @@ function App() {
                   interface {item.interfaceType} {item.interface}
                 </code>
                 <code style={{ display: 'block' }}>
-                  ip address {item.ip} {prefijos[item.prefix]}
+                  ip address  {ValidateIPaddress(item.ip)?item.ip:'error'} {prefijos[item.prefix]}
                 </code>
                 {item.bandwidth&&
                     <code style={{ display: 'block' }}>
@@ -338,7 +345,7 @@ function App() {
                 interface loopback {item.numero}
               </code>
               <code style={{ display: 'block' }}>
-                ip address {item.ip} {prefijos[item.mascara]}
+                ip address {ValidateIPaddress(item.ip)?item.ip:'error'} {prefijos[item.mascara]}
               </code>
 
             </div>
@@ -372,7 +379,7 @@ function App() {
               </code>
               {rip.map(item => {
                 return <code style={{ display: 'block' }}>
-                  network {item.ip}
+                  network {ValidateIPaddress(item.ip)?item.ip:'error'}
                 </code>
 
               })}
@@ -418,7 +425,7 @@ function App() {
               </code>
               {eigrp.map(item => {
                 return <code style={{ display: 'block' }}>
-                  network {item.ip} {wildcard[item.wildcard]}
+                  network {ValidateIPaddress(item.ip)?item.ip:'error'} {wildcard[item.wildcard]}
                 </code>
               })}
               <code style={{ display: 'block' }}>
@@ -426,7 +433,7 @@ function App() {
               </code>
               <div style={{ paddingTop: '20px' }}>
                 {router.switchs.map((item, index) => {
-                  if (item.interfaceType == 'gigabitEthernet') {
+                  if (item.interfaceType == 'gigabitEthernet' || item.interface == 'fastEthernet') {
                     return <code style={{ display: 'block' }}>
                       passive-interface {item.interfaceType} {item.interface}
                     </code>
@@ -463,14 +470,14 @@ function App() {
               </code>
               {ospf.map(item => {
                 return <code style={{ display: 'block' }}>
-                  network {item.ip} {wildcard[item.prefix]} area 0
+                  network {ValidateIPaddress(item.ip)?item.ip:'error'} {wildcard[item.prefix]} area 0
                 </code>
 
               })}
             </div>
             <div style={{ paddingTop: '20px' }}>
               {router.switchs.map((item, index) => {
-                if (item.interfaceType == 'gigabitEthernet') {
+                if (item.interfaceType == 'gigabitEthernet' || item.interfaceType =='fastEthernet') {
                   return <code style={{ display: 'block' }}>
                     passive-interface {item.interfaceType} {item.interface}
                   </code>

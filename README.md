@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Cisco Commands Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Generate the commands to configure your routers in cisco packet tracer_
 
-## Available Scripts
+## Motivation 🚀
 
-In the project directory, you can run:
+_I recently did my computer networking course at my university, we used cisco packet tracer to simulate our networks, but we were not allowed to make configurations by the graphical environment (we could only configure through the command console of each router). This was a problem for me because it was somewhat slow remembering the commands, plus some things were repetitive (like setting up interfaces or passwords of the routers) and distracted me from the main problem. For this reason, while I was advancing in my course, I made a small program in JS to generate the repetitive commands to only have to copy and paste on each router, in this way I improved my times when configuring a topology and allowed me to focus on the real problem._
 
-### `npm start`
+***Note:*** _This project is for the purpose of maximizing your productivity when making basic configurations, I clarify that it is not for the purpose of fraud in exams or practices._
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#
 
-### `npm test`
+## Built with 🛠️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [ReactJS](https://reactjs.org/)
+* [NPM](https://www.npmjs.com/)
 
-### `npm run build`
+#
+## Contributions 🖇️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feel free to make your PR or make suggestions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#
+made with ❤️ _by [danielm2402](https://github.com/danielm2402)_ 😊
